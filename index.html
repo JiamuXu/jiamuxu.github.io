@@ -106,9 +106,9 @@
         <section>
             <h2>Research Interests</h2>
             <ul>
-                <li>Probability Theory & Measure-Theoretic Probability</li>
-                <li>Bayesian Nonparametrics & Random Probability Measures</li>
-                <li>Martingale Postoders</li>
+                <li>Bayesian Nonparametrics</li>
+                <li>Random Probability Measures</li>
+                <li>Asymptotic Statistics</li>
             </ul>
         </section>
 
@@ -122,9 +122,23 @@
 
         <footer>
             <p>&copy; 2026 Jiamu Xu. Hosted on GitHub Pages.</p>
-            <p>Last updated: 2026-11-03</p>
+            <p id="last-updated"></p>
         </footer>
     </div>
+
+    <script>
+        let lastMod = new Date(document.lastModified);
+        
+        // 定义 12 个月份的大写英文简写数组
+        const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        
+        let year = lastMod.getFullYear();
+        // getMonth() 返回 0-11 的数字，刚好对应数组的索引
+        let month = monthNames[lastMod.getMonth()]; 
+        let day = String(lastMod.getDate()).padStart(2, '0');
+        
+        document.getElementById('last-updated').textContent = 'Last updated: ' + day + '-' + month + '-' + year;
+    </script>
 
 </body>
 </html>
