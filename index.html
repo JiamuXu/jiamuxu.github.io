@@ -128,12 +128,8 @@
 
     <script>
         let lastMod = new Date(document.lastModified);
-        
-        // 定义 12 个月份的大写英文简写数组
         const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-        
         let year = lastMod.getFullYear();
-        // getMonth() 返回 0-11 的数字，刚好对应数组的索引
         let month = monthNames[lastMod.getMonth()]; 
         let day = String(lastMod.getDate()).padStart(2, '0');
         
